@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="aop_bank">
+        <property name="context-root" value="aop_bank"/>
+        <property name="java-output-path" value="/aop_bank/build/classes"/>
+    </wb-module>
+</project-modules>

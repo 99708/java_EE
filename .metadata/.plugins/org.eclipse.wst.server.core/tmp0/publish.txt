@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Nov 19 22:33:14 CST 2018
+org.eclipse.jst.jee.server\:/binary\:E\:\\Test\\EclipseWorkspace\\ssm_upload_download\\WebContent\\WEB-INF\\lib\\spring-web-4.1.6.RELEASE.jar=WEB-INF/lib/spring-web-4.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:E\:\\Test\\EclipseWorkspace\\ssm_upload_download\\WebContent\\WEB-INF\\lib\\log4j-core-2.0-rc1.jar=WEB-INF/lib/log4j-core-2.0-rc1.jar

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  <configuration>
+  	<!-- 开启log4j支持 -->
+  	<!-- 别名配置 -->
+  	<!-- 数据库配置 -->
+  	<!-- mapper配置 -->	
+  </configuration>

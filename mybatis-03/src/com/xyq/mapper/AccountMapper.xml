@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xyq.mapper.AccountMapper">
+	<resultMap type="account" id="account">
+		<result property="pwd" column="password"/>
+	</resultMap>
+	<select id="getAccountByIdPwd" resultMap="account" >
+		select * from money where id = #{0} and password = #{1}
+	</select>
+	<select id="getAccountByIdName" resultMap="account" >
+		select * from money where id = #{0} and name = #{1}
+	</select>
+	<update id="updateAccountMoney">
+		update money set money = money + #{money} where id = #{id}
+	</update>
+</mapper>

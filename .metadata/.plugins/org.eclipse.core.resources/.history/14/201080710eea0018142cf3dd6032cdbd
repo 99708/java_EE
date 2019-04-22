@@ -1,0 +1,12 @@
+package com.xyq.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Select;
+
+import com.xyq.entity.Log;
+
+public interface LogMapper {
+	@Select("select * from log limit #{0}, #{1}")
+	List<Log> pageLog(int startPage, int pageSize);
+}

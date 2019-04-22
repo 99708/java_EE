@@ -1,0 +1,5 @@
+package com.xyq.servlet.impl;
+
+public class AccountServiceImpl {
+
+}

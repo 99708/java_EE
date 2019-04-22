@@ -1,0 +1,26 @@
+package com.xyq.controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+
+import com.google.gson.Gson;
+import com.xyq.entity.Log;
+import com.xyq.service.LogService;
+
+@Controller
+public class LogController {
+	
+	@Resource
+	private LogService logServiceImpl;
+	
+	public void pageLog(int numPage, int pageSize, HttpServletResponse resp) throws IOException {
+		List<Log> pageLog = logServiceImpl.pageLog(numPage, pageSize);
+		resp.getWriter().write(new Gson().toJson(pageLog));
+	}
+
+}

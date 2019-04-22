@@ -1,0 +1,48 @@
+package com.xyq.entity;
+
+public class Account {
+	private int uid;
+	private String uname;
+	private double money;
+	private String upwd;
+	
+	public Account() {
+		super();
+	}
+	public Account(int uid, String uname, double money, String upwd) {
+		super();
+		this.uid = uid;
+		this.uname = uname;
+		this.money = money;
+		this.upwd = upwd;
+	}
+	public int getUid() {
+		return uid;
+	}
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+	public String getUname() {
+		return uname;
+	}
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+	public double getMoney() {
+		return money;
+	}
+	public void setMoney(double money) {
+		this.money = money;
+	}
+	public String getUpwd() {
+		return upwd;
+	}
+	public void setUpwd(String upwd) {
+		this.upwd = upwd;
+	}
+	@Override
+	public String toString() {
+		return "Account [uid=" + uid + ", uname=" + uname + ", money=" + money + ", upwd=" + upwd + "]";
+	}
+	
+}

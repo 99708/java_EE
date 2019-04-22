@@ -1,0 +1,38 @@
+package com.xyq.controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.google.gson.Gson;
+import com.xyq.entity.Email;
+import com.xyq.entity.User;
+import com.xyq.service.EmailService;
+
+@Controller
+public class EmailController {
+	
+	@Resource
+	private EmailService emailService;
+	
+	@RequestMapping("getEmail")
+	public void getEmail(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		HttpSession session = req.getSession();
+		User user1 = (User) session.getAttribute("user");
+		List<Email> emailList = emailService.selEmailByUid(user1);
+		if(emailList.size() != 0) {
+			resp.setContentType("text/json");
+			resp.getWriter().write(new Gson().toJson(emailList));
+		}else {
+			resp.setContentType("text/json");
+			resp.getWriter().write(new Gson().toJson(false));
+		}
+	}
+}

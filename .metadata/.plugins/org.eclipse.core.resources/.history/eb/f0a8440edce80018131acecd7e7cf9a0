@@ -1,0 +1,42 @@
+package com.xyq.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.xyq.entity.Account;
+import com.xyq.service.AccountService;
+
+@Controller
+public class AccountController {
+	
+	@Resource
+	private AccountService accountService;
+	
+	@RequestMapping("getAccountById")
+	public Account getAccountById(int aid) {
+		return accountService.getAccountById(aid);
+	}
+	
+	@RequestMapping("getAccountByIdPwd")
+	public Account getAccountByIdPwd(int aid, String apwd) {
+		return accountService.getAccountByIdPwd(aid, apwd);
+	}
+	
+	@RequestMapping("getAccountByIdName")
+	public Account getAccountByIdName(int aid, String aname) {
+		return accountService.getAccountByIdName(aid, aname);
+	}
+
+	@RequestMapping("getAccountByIdPwdMoney")
+	public Account getAccountByIdPwdMoney(int aid, String apwd, double money) {
+		return accountService.getAccountByIdPwdMoney(aid, apwd, money);
+	}
+
+	@RequestMapping("transferAccount")
+	public int transferAccount(int aid, int inId, double money) {
+		return accountService.transferAccount(aid, inId, money);
+	}
+
+}

@@ -1,0 +1,55 @@
+package com.xyq.controller;
+
+import java.io.IOException;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.xyq.entity.Account;
+import com.xyq.service.AccountService;
+
+@Controller
+public class AccountController {
+	
+	@Resource
+	private AccountService accountService;
+	
+	@RequestMapping("getAccountById")
+	public void getAccountById(int aid, HttpServletResponse resp) throws IOException {
+		Account account = accountService.getAccountById(aid);
+		sendRequest(account, resp);
+	}
+	
+	private void sendRequest(Account account, HttpServletResponse resp) throws IOException {
+		if(account != null) {
+			resp.getWriter().println(true);
+		}else {
+			resp.getWriter().println(false);
+		}
+	}
+	
+	@RequestMapping("getAccountByIdPwd")
+	public void getAccountByIdPwd(int aid, String apwd) {
+		return accountService.getAccountByIdPwd(aid, apwd);
+		
+	}
+	
+	@RequestMapping("getAccountByIdName")
+	public void getAccountByIdName(int inId, String aname) {
+		return accountService.getAccountByIdName(inId, aname);
+	}
+
+	@RequestMapping("getAccountByIdPwdMoney")
+	public void getAccountByIdPwdMoney(int aid, String apwd, double money) {
+		return accountService.getAccountByIdPwdMoney(aid, apwd, money);
+	}
+
+	@RequestMapping("transferAccount")
+	public int String (int aid, int inId, double money) {
+		return accountService.transferAccount(aid, inId, money);
+	}
+
+}

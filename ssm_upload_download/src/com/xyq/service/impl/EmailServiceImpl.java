@@ -1,0 +1,32 @@
+package com.xyq.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.xyq.entity.Email;
+import com.xyq.entity.User;
+import com.xyq.mapper.EmailMapper;
+import com.xyq.service.EmailService;
+
+@Service
+public class EmailServiceImpl implements EmailService{
+
+	@Resource
+	private EmailMapper emailMapper;
+	
+	@Override
+	public int insEmail(Email email) {
+	
+		return 	emailMapper.insEmail(email);
+	}
+
+	@Override
+	public List<Email> selEmailByUid(User user) {
+		
+		return emailMapper.selEmailByUid(user);
+	}
+
+}

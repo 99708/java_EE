@@ -1,0 +1,12 @@
+package com.xyq.mapper;
+
+import org.apache.ibatis.annotations.Insert;
+
+import com.xyq.entity.Email;
+
+public interface EmailMapper {
+	
+	@Insert("insert into email values(default, #{0}, #{1}, #{2}, #{3})")
+	int insEmail(Email email);
+	
+}

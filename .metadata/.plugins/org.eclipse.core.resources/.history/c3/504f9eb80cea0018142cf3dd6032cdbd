@@ -1,0 +1,23 @@
+package com.xyq.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.xyq.entity.Log;
+import com.xyq.mapper.LogMapper;
+import com.xyq.service.LogService;
+
+@Service
+public class LogServiceImpl implements LogService{
+
+	@Resource
+	private LogMapper logMapper;
+	@Override
+	public List<Log> pageLog(int numPage, int pageSize) {
+		return null;
+	}
+
+}

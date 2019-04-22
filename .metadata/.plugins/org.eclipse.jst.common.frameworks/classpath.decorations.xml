@@ -1,0 +1,17 @@
+<classpath>
+  <container id="spring_Mybatis!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Test/EclipseWorkspace/spring_Mybatis/WebContent/WEB-INF/lib/spring-web-4.1.6.RELEASE.jar">
+      <source-attachment-path>E:/work/帮助文档和源码关联/源码/spring-framework-4.1.6.RELEASE源码.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="aop-Login!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Test/EclipseWorkspace/aop-Login/WebContent/WEB-INF/lib/aopalliance.jar">
+      <source-attachment-path>E:/work/帮助文档和源码关联/源码/spring-framework-4.1.6.RELEASE源码.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="ssm_upload_download!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Test/EclipseWorkspace/ssm_upload_download/WebContent/WEB-INF/lib/spring-web-4.1.6.RELEASE.jar">
+      <source-attachment-path>E:/work/帮助文档和源码关联/源码/spring-framework-4.1.6.RELEASE源码.zip</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

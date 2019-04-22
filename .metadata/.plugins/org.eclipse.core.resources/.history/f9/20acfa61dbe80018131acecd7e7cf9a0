@@ -1,0 +1,15 @@
+package com.xyq.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+
+import com.xyq.service.AccountService;
+
+@Controller
+public class AccountController {
+	
+	@Resource
+	private AccountService accountService;
+
+}

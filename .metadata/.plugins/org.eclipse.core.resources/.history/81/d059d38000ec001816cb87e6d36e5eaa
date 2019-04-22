@@ -1,0 +1,11 @@
+package com.xyq.service;
+
+import java.util.List;
+
+import com.xyq.entity.Email;
+import com.xyq.entity.User;
+
+public interface EmailService {
+	int insEmail(Email email);
+	List<Email> selEmailByUid(User user);
+}

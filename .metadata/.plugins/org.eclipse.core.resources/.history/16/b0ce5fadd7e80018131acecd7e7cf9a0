@@ -1,0 +1,5 @@
+package com.xyq.servlet;
+
+public interface AccountService {
+
+}

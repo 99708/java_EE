@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 引入dtd约束 -->
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 开启log4j支持 -->
+	<settings>
+		<setting name="logImpl" value="LOG4J"/>
+	</settings>
+	<!-- 类别名设置 -->
+	<typeAliases>
+		<package name="com.xyq.entity"/>
+	</typeAliases>
+	<!-- 数据库配置 -->
+	<environments default="mysql">
+		<environment id="mysql">
+			<!-- 数据库事务配置 -->		
+			<transactionManager type="JDBC"></transactionManager>
+			<!-- 数据库具体配置 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+				<property name="username" value="root"/>
+				<property name="password" value="123456"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- mapper配置 -->
+	<mappers>
+		<mapper resource="com/xyq/mapper/flowerMapper.xml"/>
+	</mappers>
+</configuration>

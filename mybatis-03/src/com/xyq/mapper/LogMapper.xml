@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.xyq.mapper.LogMapper">
+  	<insert id="inserLog">
+  		insert into log values(#{outid}, #{inid}, #{money})
+  	</insert>
+  	<select id="getCount" resultType="int" >
+  		select count(*) from log
+  	</select>
+  	<resultMap type="log" id="log">
+  		<result property="outid" column="tid"/>
+  		<result property="inid" column="aid"/>
+  	</resultMap>
+  	<select id="pageLog" resultMap="log" >
+  		select * from log limit #{0}, #{1}
+  	</select>
+  </mapper>

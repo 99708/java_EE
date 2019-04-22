@@ -1,0 +1,17 @@
+package com.xyq.controller;
+
+import org.springframework.stereotype.Controller;
+
+/**
+ * 控制器类
+ * @author Dell
+ *
+ */
+@Controller
+public class MyController {
+	
+	public String demo() {
+		System.out.println("MyController.demo()");
+		return "index.jsp";
+	}
+}

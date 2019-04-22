@@ -1,0 +1,9 @@
+package com.xyq.entity;
+
+public class Email {
+	private int eid;
+	private String title;
+	private String sendtime;
+	private int senduid;
+	private int reciveuid;
+}

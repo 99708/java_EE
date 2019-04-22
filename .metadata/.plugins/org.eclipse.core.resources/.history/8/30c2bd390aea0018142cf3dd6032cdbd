@@ -1,0 +1,5 @@
+package com.xyq.mapper;
+
+public interface LogMapper {
+
+}
